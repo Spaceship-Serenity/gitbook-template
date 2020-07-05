@@ -12,80 +12,80 @@
 
 [![Build Status](https://travis-ci.com/renkeju/gitbook-template.svg?branch=master)](https://travis-ci.com/renkeju/gitbook-template)
 
-## 项目结构
+## Project Structure
 
-1. 克隆模版并去掉模版中的历史记录
+1. Clone the template and remove the history in the template
 
     ```
     git clone https://github.com/renkeju/gitbook-template l2tp-usage-guide
     cd l2tp-usage-guide && rm -rf .git
     ```
 
-2. 修改模版
+2. Modify the template
 
     * `.travis.yml`
 
-        * recipients: 修改为你个人邮件地址
-        * REF: 修改为你的 github 项目地址
+        * recipients: change to your personal email address
+        * REF: Change to your github project address
 
     * `book.json`
 
-        修改 gitbook 相应配置，可以参考此文档 [book.json配置文件][1]
+        To modify the corresponding configuration of gitbook, you can refer to this document [book.json configuration file][1]
 
-    * `SUMMARY.md` 
+    * `SUMMARY.md`
         
-        定义目录结构
+        Define the directory structure
 
     * `CNAME`
 
-        如果你不需要指定自己使用的域名，可以删除这个文件。
+        If you do not need to specify the domain name you use, you can delete this file.
         
-        如果需要请在 DNS 服务供应商中使用 CNAME 方式将 gitbook.renkeju.com 指向 renkeju.github.com
+        If necessary, please use the CNAME method in the DNS service provider to point gitbook.renkeju.com to renkeju.github.com
 
-3. 在 github 上创建新项目
+3. Create a new project on github
 
-    比如我对新仓库命名为 l2tp-usage-guide
+    For example, I named the new warehouse l2tp-usage-guide
 
-    ![创建一个新的仓库][2]
+    ![Create a new warehouse][2]
 
-    把修改好的模版 push 到新的仓库 
+    Push the modified template to the new warehouse
 
     ```
-    echo "# l2tp-usage-guide" > README.md
+    echo "# l2tp-usage-guide"> README.md
     git init
-    git add .
+    git add.
     git commit -m "first commit"
     git remote add origin git@github.com:renkeju/l2tp-usage-guide.git
     git push -u origin master
     ```
-
+    
 ## Github Pages
 
-1. 新建 gh-pages 分支:
+1. Create a new gh-pages branch:
 
     ```
     git checkout -b gh-pages
     git push origin gh-pages
     ```
 
-2. 在项目 `Settings` -> `GitHub Pages`开启 Github Pages 服务:
+2. Open the Github Pages service in the project `Settings` -> `GitHub Pages`:
 
-   ![Github Pages 设置][3]
+   ![Github Pages Settings][3]
 
 ## Travis CI
 
-1. [点击此处][4] 给刚刚在 github 上创建的项目 l2tp-usage-guide 开启 Travis 服务：
+1. [Click here][4] Start the Travis service for the project l2tp-usage-guide just created on github:
 
-    ![Travis CI 仓库][5]
+    ![Travis CI Warehouse][5]
 
-2. 在 [个人设置][6] 里申请 token 让 Travis 有权限修改这个项目：
+2. Apply for token in [Personal Settings][6] to give Travis permission to modify this project:
 
-    ![Github 个人访问令牌领域][8]
+    ![Github Personal Access Token Field][8]
 
-    然后选择 repo，点击生成按钮:
+    Then select repo and click the generate button:
 
-    ![Github 个人访问令牌][7]
+    ![Github Personal Access Token][7]
 
-3. 复制生成的 token，填写在 Travis 的设置-全局变量中，并且取名为 TOKEN:
+3. Copy the generated token, fill in the Travis settings-global variables, and name it TOKEN:
 
     ![Travis CI TOKEN][9]
