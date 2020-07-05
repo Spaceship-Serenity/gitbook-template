@@ -6,7 +6,7 @@ cache: npm
 notifications:
   email:
     recipients:
-      - renkeju@gmail.com
+      - aleksander.zywot@mountsinai.org
     on_success: change
     on_failure: always
 
@@ -31,4 +31,4 @@ branches:
 
 env:
   global:
-    - REF=github.com/renkeju/gitbook-template.git
+    - REF=github.com/Spaceship-Serenity/gitbook-template.git
