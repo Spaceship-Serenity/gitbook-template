@@ -1,8 +1,8 @@
 {
     "title": "Gitbook Template",
-    "author": "renkeju",
+    "author": "alek-zywot",
     "output.name": "site",
-    "language": "zh-hans",
+    "language": "en",
     "gitbook": "3.2.3",
     "root": ".",
     "structure": {
